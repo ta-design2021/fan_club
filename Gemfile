@@ -51,6 +51,7 @@ gem "bootsnap", require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
+  gem 'rspec-rails', '~> 4.0.0'
 end
 
 group :development do
@@ -71,7 +72,13 @@ group :test do
   gem "webdrivers"
 end
 
-# 20231103 デプロイのための設定（DBがPostgreSQLなので）
-group :production do
-  gem 'pg'
+group :development do
+  gem 'rubocop', require: false
 end
+
+# デバッグのためのGem
+gem 'pry-rails'
+# ユーザー管理機能を使用できるようGemを追加
+gem 'devise'
+# 変更されないデータをモデルファイル内に直接記述することで、データベースへ保存せずにデータを取り扱うことができるGemを追加
+gem 'active_hash'
