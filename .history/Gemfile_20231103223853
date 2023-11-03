@@ -70,8 +70,3 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
-
-# 20231103 デプロイのための設定（DBがPostgreSQLなので）
-group :production do
-  gem 'pg'
-end

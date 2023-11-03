@@ -71,7 +71,7 @@ group :test do
   gem "webdrivers"
 end
 
-# 20231103 デプロイのための設定（DBがPostgreSQLなので）
+# 20231103 デプロイの設定
 group :production do
   gem 'pg'
 end
